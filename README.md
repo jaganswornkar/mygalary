@@ -21,4 +21,6 @@ after doing all the setup, run `npm start` to run the application and visit http
 
 ### backend :
 backend is in Node js (express and mysql database with sequelize-migration )
-
+to run backend first install all the requirements by `npm install` command and <br/>
+then run command `nodemon server.js` if you have nodemon already installed otherwise install `nodemon` by command <br/>
+```sudo npm install -g nodemon```  or run `node server.js` <br/>
