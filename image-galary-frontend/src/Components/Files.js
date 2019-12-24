@@ -17,7 +17,7 @@ class Files extends Component {
 
   // component will mount to get all the image urls from db:
   UNSAFE_componentWillMount() {
-    Axios.get("http://localhost:8001/allFiles")
+    Axios.get("http://15.206.140.31:8001/allFiles")
       .then(data => {
         this.setState({ files: data.data });
       })
@@ -53,7 +53,7 @@ class Files extends Component {
   onClickHandler = () => {
     if (this.state.url) {
       this.setState({ uploading: false });
-      Axios.post("http://localhost:8001/uploadFile", { url: this.state.url })
+      Axios.post("http://15.206.140.31:8001/uploadFile", { url: this.state.url })
         .then(data => {
           const allFiles = data.data;
           this.setState({ url: "", files: allFiles });
